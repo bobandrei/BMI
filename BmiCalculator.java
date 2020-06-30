@@ -19,7 +19,7 @@ public class BmiCalculator {
     double metricOrImperial;
     double totalPounds;
     double totalInches;
-    
+
     //LET USER TO CHO0SE IN WHICH SYSTEM WANTS TO INPUT THE WEIGHT AND THE HEIGHT
     public void metricOrImperial() {
         boolean continueLoop = true;
@@ -55,7 +55,7 @@ public class BmiCalculator {
         } while (continueLoop);
 
     } // end method metricOrImperial
-    
+
     //ENTER WEIGHT AND HEIGHT IN IMPERIAL SYSTEM
     public void readImperial() {
         boolean continueLoop = true;
@@ -97,7 +97,7 @@ public class BmiCalculator {
                 System.out.println("Input invalid! You must enter a valid Weight(between 0 and 15 pounds)- whole numbers only. Please try again.\n");
             }
         } while (continueLoop);
-        
+
         totalPounds = stones * 14 + pounds; //convert Stones and Pounds in totalPounds
         kilograms = totalPounds * 0.45359237; //convert totalPounds in Kilograms
         System.out.printf("Your Weight in Kilograms is: %.2f\n", kilograms);
@@ -140,12 +140,12 @@ public class BmiCalculator {
                 System.out.println("Input invalid! You must enter a valid Height(between 0 and 13 Inches)-whole numbers only. Please try again.\n");
             }
         } while (continueLoop);
-        
+
         totalInches = feet * 12 + inches; //convert Feet and Inches in totalInches
         centimeters = totalInches * 2.54; //convert totalInches in Centimeters
         System.out.printf("Your height in Centimeters is: %.0f\n", centimeters);
     }//end method readImperial()
-    
+
       //ENTER WEIGHT AND HEIGHT IN METRIC SYSTEM
     public void readMetric() {
         boolean continueLoop = true;
@@ -196,7 +196,7 @@ public class BmiCalculator {
         inches = totalInches % 12; //convert the remainder of totalInches to Inches
         System.out.printf("Your Height is: %.0f Feet and %.0f Inches\n", Math.floor(feet), inches);
     }//end method readMetric()
-    
+
     //method to take the Weight and Height either from readImperial or either from readMetric
     public void convertToMetric() {
         if (metricOrImperial == 1) {
@@ -207,20 +207,20 @@ public class BmiCalculator {
             height = centimeters / 100;//calculate Height in Meters
         }
     }//end method convertToMteric()
-    
+
     // method to calculate and print BodyMassIndex
     public void calculateBmi() {
         this.convertToMetric();//call convertToMetric to take Weight and Height
         BMI = weight / (height * height);
         System.out.printf("Your bmi is: %.2f", BMI);
     }//end method calculateBmi()
-    
+
     // method to print the results
     public void printResult() {
         if (BMI < 18.5) {
             System.out.println("\nYou are underweight");
         } else if (BMI >= 18.5 && BMI <= 24.9) {
-            System.out.println("\nYou are healthy, normal weight");
+            System.out.println("\nYou are healthy,you have normal weight");
         } else if (BMI >= 25 && BMI <= 29.9) {
             System.out.println("\nYou are overweight");
         } else if (BMI > 30) {
