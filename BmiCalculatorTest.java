@@ -1,8 +1,4 @@
-/*
-ANDREI BOB
-0872705507
-bobandrei26@gmail.com
-*/
+
 
 //create BmiCalculator object and invoke the  methods
 public class BmiCalculatorTest {
