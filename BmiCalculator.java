@@ -1,8 +1,4 @@
-/*
-ANDREI BOB
-0872705507
-bobandrei26@gmail.com
-*/
+
 
 import java.util.Scanner;
 import java.util.InputMismatchException;
